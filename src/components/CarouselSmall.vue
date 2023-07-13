@@ -34,25 +34,25 @@
       this.slideWidth = this.$el.offsetWidth;
     },
     methods: {
-        moveSlide(direction) {
-            if (direction === 'next') {
-            this.currentSlide++;
-            if (this.currentSlide >= this.items.length) {
-                this.currentSlide = 0; // Go back to the start
-            }
-            } else if (direction === 'prev') {
-            this.currentSlide--;
-            if (this.currentSlide < 0) {
-                this.currentSlide = this.items.length - 1; // Go back to the end
-            }
-            }
-        },
-        prevSlide() {
-            this.moveSlide('prev');
-        },
-        nextSlide() {
-            this.moveSlide('next');
-        },
+      moveSlide(direction) {
+        if (direction === 'next') {
+          this.currentSlide++;
+          if (this.currentSlide >= this.items.length) {
+            this.currentSlide = 0; // Go back to the start
+          }
+        } else if (direction === 'prev') {
+          this.currentSlide--;
+          if (this.currentSlide < 0) {
+            this.currentSlide = this.items.length - 1; // Go back to the end
+          }
+        }
+      },
+      prevSlide() {
+        this.moveSlide('prev');
+      },
+      nextSlide() {
+        this.moveSlide('next');
+      },
     },
   };
   </script>
@@ -61,8 +61,8 @@
   .carousel {
     position: relative;
     overflow: hidden;
-    width: 400px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
+    width: 100%; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
   }
   
   .carousel-wrapper {
@@ -102,5 +102,44 @@
   .carousel-button i {
     pointer-events: none;
   }
+  
+  /* Responsive Styles for Smaller Screens */
+  @media (max-width: 768px) {
+    .carousel {
+      height: 300px;
+    }
+  
+    .carousel-button {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel {
+      height: 200px;
+    }
+  
+    .carousel-button {
+      font-size: 12px;
+    }
+  }
+  
+  /* Styles for Larger Screens */
+  @media (min-width: 992px) {
+    .carousel {
+      width: 100%; /* Adjust the width for larger screens */
+      height: 100%; /* Adjust the height for larger screens */
+    }
+  
+    .carousel-controls {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .carousel-button {
+      font-size: 16px;
+    }
+  }
   </style>
+  
   

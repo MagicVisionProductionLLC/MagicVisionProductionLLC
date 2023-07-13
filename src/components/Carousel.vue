@@ -26,8 +26,8 @@
         currentSlide: 0,
         slideWidth: 0,
         showPopup: false,
-        clickedImageUrl: '',
-        clickedImageAlt: ''
+        clickedImageUrl: "",
+        clickedImageAlt: "",
       };
     },
     props: {
@@ -52,12 +52,12 @@
       },
       openImage(imageUrl) {
         this.clickedImageUrl = imageUrl;
-        this.clickedImageAlt = this.items.find(item => item.imageUrl === imageUrl).altText;
+        this.clickedImageAlt = this.items.find((item) => item.imageUrl === imageUrl).altText;
         this.showPopup = true;
       },
       closeImage() {
         this.showPopup = false;
-      }
+      },
     },
   };
   </script>
@@ -66,7 +66,7 @@
   .carousel {
     position: relative;
     overflow: hidden;
-    width: 1000px; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     height: 500px; /* Adjust the height as needed */
   }
   
@@ -128,5 +128,24 @@
     object-fit: contain;
   }
   
+  @media (max-width: 768px) {
+    .carousel {
+      height: 300px;
+    }
+  
+    .carousel-button {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel {
+      height: 200px;
+    }
+  
+    .carousel-button {
+      font-size: 12px;
+    }
+  }
   </style>
   

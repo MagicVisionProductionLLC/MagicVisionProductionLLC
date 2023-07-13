@@ -15,9 +15,9 @@
     "vue-carousel": "^0.18.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "5.0.0-alpha.7",
+    "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "5.0.0-alpha.7",
-    "@vue/cli-service": "5.0.0-alpha.7",
+    "@vue/cli-service": "^5.0.8",
     "@vue/compiler-sfc": "3.0.7",
     "babel-eslint": "10.1.0",
     "eslint": "7.22.0",
